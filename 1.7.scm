@@ -13,8 +13,6 @@
 ; We know the precision is at its limit when the result of
 ; the improve function is the same as the previous call
 
-(define (square x) (* x x))
-
 (define (good-enough? guess x)
     (= (improve guess x) guess))
 
