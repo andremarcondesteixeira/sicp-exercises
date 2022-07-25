@@ -66,3 +66,9 @@
 ; (A 2 (A 2 2)) ; <--------------------------------------------------- (A 2 2) was used in line 41, and it's result was 4
 ; (A 2 4) ; <--------------------------------------------------------- (A 2 4) was used in line 37, and it's result was 65536
 ; 65536
+
+(define (f n) (A 0 n)) ; returns 2 * n
+
+(define (g n) (A 1 n)) ; if n is 0 returns 0, if n < 0 exceeds maximum recursion depth, if > 0 returns 2 to the power of n
+
+(define (h n) (A 2 n)) ; if n is 0 returns 0, if n < 0 exceeds maximum recursion depth, if > 0 returns 2 to the power of (h (- n 1))
